@@ -2,7 +2,7 @@
 ## Workflows, jobs and steps
 
 _Workflows_ belong to a _Repository_ (1 or more)
-> Triggered upon _Events_
+> Triggered using _Events_ (1 or more triggers can be configured)
 
 Workflow triggers
 > push - pushing a commit  
