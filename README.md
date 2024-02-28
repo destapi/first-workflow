@@ -21,11 +21,12 @@ Workflow triggers
 
 _Jobs_ belong to a _Workflow_ (1 or more)
 > Executed in a _Runner_ (execution environment)  
-> Can run either in parallel (default) or sequantially  
+> Every _Job_ has its own _Runner_, and the _Runners_ can be different for each _Job_
+> _Jobs_ can run either in parallel (default) or sequantially  
 > Can be run conditionally  
 
 _Steps_ belong to a _Job_ (1 or more)
 > Execute an _Action_ (shell script)  
-> Executed in sequential order (not in parallel)  
-> Can be run conditionally  
+> _Steps_ are executed in sequential order (not in parallel)  
+> Can be executed conditionally as well  
 

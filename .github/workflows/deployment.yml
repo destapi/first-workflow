@@ -1,6 +1,6 @@
 # Workflow definition, one per yaml file
 # start with name of workflow
-name: Testing project
+name: Deploy project
 # identify event(s) that will trigger the workflow
 on: push
 # define jobs to be ran by the workflow
@@ -21,4 +21,21 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm test
-        
+  deploy:
+    # define job runner
+    runs-on: ubuntu-latest
+    # define steps to be executed by the job
+    steps:
+      - name: Retrieve project code
+        # runs will execute a command, while uses will execute a named action
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Deploy project
+        run: echo "deploying project..."
