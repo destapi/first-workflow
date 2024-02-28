@@ -2,7 +2,7 @@
 # start with name of workflow
 name: Deploy project
 # identify event(s) that will trigger the workflow
-on: push
+on: [push, workflow_dispatch]
 # define jobs to be ran by the workflow
 jobs:
   test:
