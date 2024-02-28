@@ -4,6 +4,21 @@
 _Workflows_ belong to a _Repository_ (1 or more)
 > Triggered upon _Events_
 
+Workflow triggers
+> push - pushing a commit  
+> pull_request - pull request action  
+> create - createing a branch or tag  
+> fork - forking a repository  
+> issues - opening or deleting an issue  
+> issue_comment - issue or pull request comment  
+> watch - repository was starred  
+> discussion - discussion was created or deleted  
+> etc  
+> workflow_dispatch - manually triggered workflow  
+> repository_dispatch - REST API request triggered action  
+> schedule - workflow is scheduled  
+> workflow_call - can be called by other workflows  
+
 _Jobs_ belong to a _Workflow_ (1 or more)
 > Executed in a _Runner_ (execution environment)  
 > Can run either in parallel (default) or sequantially  
